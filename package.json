@@ -2,8 +2,12 @@
   "name": "palindrome-api",
   "version": "1.0.0",
   "author": "Claudina Avalos <claudina.avalos@opendeusto.es>",
+  "main": "index.js",
   "scripts": {
-    "lint": "eslint ./src/**/**"
+    "start": "node .",
+    "dev-start": "nodemon .",
+    "lint": "eslint index.js ./src/**/**",
+    "test": "jest"
   },
   "dependencies": {
     "cors": "^2.8.5",
