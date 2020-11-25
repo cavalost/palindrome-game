@@ -4,6 +4,14 @@ const { score } = require('../service/wordService');
 const router = Router();
 const scoreList = [];
 
+router.get('/getScores', (req, res, next) => {
+	try {
+		return res.send(scoreList);
+	} catch (error) {
+		return next(new Error(error));
+	}
+});
+
 router.post('/submitEntry', (req, res, next) => {
 	const { name, word } = req.body;
 	try {
